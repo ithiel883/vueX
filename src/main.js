@@ -19,12 +19,17 @@ const store = createStore({
         },
     
     },
+    actions: {
+        increment(context) {
+            context.commit('increment')
+        }
+    },
     getters: {
          finalCounter(state) {
              return state.counter * 2;
          },
-         normalizedCounter(state) {
-             const finalCounter = state.counter * 3;
+         normalizedCounter(_, getters) {
+             const finalCounter = getters.finalCounter
              if(finalCounter < 0) {
                  return 0;
              }
