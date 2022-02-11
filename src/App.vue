@@ -5,7 +5,7 @@
   <button @click="addOne">Add 10</button>
   <change-counter></change-counter>
   </base-container>
-  <base-container title="auth">
+  <base-container title="Auth">
 <user-auth></user-auth>
   </base-container>
 </template>
