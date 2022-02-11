@@ -3,11 +3,13 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default {
     methods: {
-        addOne() {
-           this.$store.commit('increment')
-        }
+        // addOne() {
+        //    this.$store.dispatch('increment')
+        // }
+        ...mapActions([])
     }
 }
 
